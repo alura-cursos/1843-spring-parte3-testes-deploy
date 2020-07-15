@@ -3,6 +3,7 @@ package br.com.alura.forum.config.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -18,6 +19,7 @@ import br.com.alura.forum.repository.UsuarioRepository;
 
 @EnableWebSecurity
 @Configuration
+@Profile("prod")
 public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
 	@Autowired
